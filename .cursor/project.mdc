@@ -1,0 +1,167 @@
+---
+alwaysApply: true
+---
+# App Promotion Website — Permanent Development Rules
+
+## Technology
+
+This project uses:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+Do NOT introduce:
+
+- React
+- Vue
+- Angular
+- Next.js
+- Bootstrap
+- Tailwind
+- jQuery
+- unnecessary frontend libraries
+
+unless explicitly requested.
+
+## Project philosophy
+
+This is a static, SEO-friendly app promotion/discovery website.
+
+The developer already knows HTML, CSS and JavaScript.
+
+Therefore:
+
+- Keep code readable.
+- Keep code easy to manually edit.
+- Avoid unnecessary abstraction.
+- Avoid unnecessary complexity.
+- Use meaningful class names.
+- Keep CSS organized.
+- Keep JavaScript modular and understandable.
+
+## SEO
+
+SEO is a major requirement.
+
+Important content must exist in HTML.
+
+Do NOT make the entire website dependent on JavaScript-generated content.
+
+Important:
+
+- headings
+- app names
+- descriptions
+- navigation links
+- category links
+- app detail links
+- primary page content
+
+should be available in HTML.
+
+JavaScript should primarily enhance the experience.
+
+## Reference screenshots
+
+The supplied screenshots are design references only.
+
+Do not clone them.
+
+Do not copy their source code.
+
+Do not copy their branding, text, images or exact visual identity.
+
+Use them to understand:
+
+- visual hierarchy
+- card composition
+- spacing
+- backgrounds
+- responsive behavior
+- presentation style
+
+Main1 and Main-res are the primary visual references.
+
+cardref and cardref-res are primarily references for the concept of displaying trending/featured apps.
+
+## Responsive design
+
+Mobile is not simply a smaller desktop version.
+
+Components should be intentionally redesigned for mobile where necessary.
+
+Pay special attention to:
+
+- featured cards
+- navigation
+- hero
+- app grids
+- buttons
+- typography
+- spacing
+
+## Maintainability
+
+Use CSS variables for:
+
+- colors
+- spacing where appropriate
+- border radius
+- shadows
+- typography values where useful
+
+Do not scatter repeated values throughout the stylesheet.
+
+## Important content
+
+Do not invent:
+
+- fake ratings
+- fake reviews
+- fake download numbers
+- fake security claims
+- fake companies
+- fake awards
+- fake user counts
+
+Use clearly marked placeholders when real information is not available.
+
+## Modification safety
+
+When working on a specific feature:
+
+- inspect the existing implementation first
+- modify only the relevant files
+- do not unnecessarily rewrite unrelated sections
+- preserve existing functionality
+- preserve existing SEO
+- preserve responsive behavior
+- avoid breaking previously completed sections
+
+Before finishing a task, check for:
+
+- console errors
+- broken links
+- layout overflow
+- obvious responsive issues
+- accidental CSS conflicts
+
+## Phase 5 — Featured / trending cards (DEFERRED)
+
+Phase 5 is the three ranked featured/trending app cards on the homepage
+(`#trending`, between the hero and the app directory).
+
+Status: **deferred**. Do not implement it until the user explicitly says
+to implement Phase 5.
+
+Do not:
+
+- build those cards, a simplified stand-in, or dummy app data
+- populate `#trending` / `.phase-reserved`
+- write JavaScript whose job is to generate the missing cards
+- remove, relocate, or reuse that reserved section for another feature
+
+If a later phase genuinely cannot proceed without those cards, ask before
+implementing the dependency. Independent work (directory, categories,
+detail pages, search on existing UI, SEO, a11y, performance) may continue.

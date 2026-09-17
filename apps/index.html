@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>All Apps — Yonoio</title>
+  <meta name="description" content="Browse the full Yonoio directory of Android apps. Every listing links to a detail page with the app's category, version and description.">
+  <link rel="canonical" href="https://yonoio.com/apps/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0f14">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yonoio">
+  <meta property="og:title" content="All Apps — Yonoio">
+  <meta property="og:description" content="Browse the full Yonoio directory of Android apps.">
+  <meta property="og:url" content="https://yonoio.com/apps/">
+
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ====================================================================
+       Announcement bar — scrolls away; only the header below is sticky
+       ==================================================================== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__text">
+        <span class="topbar__message">A growing directory of Android apps, with a detail page for every listing.</span>
+        <a class="topbar__link" href="../apps/index.html">Browse all apps <span aria-hidden="true">&rarr;</span></a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       Site header — shared across every page
+       ==================================================================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+
+      <!-- BRAND: also appears in the footer. See css/style.css section 10.3. -->
+      <a class="site-logo" href="../index.html" aria-label="Yonoio home">
+        <span class="site-logo__mark" aria-hidden="true">Y</span>
+        <span class="site-logo__text">Yono<span class="site-logo__accent">io</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../index.html">Home</a></li>
+          <li><a class="primary-nav__link" href="../apps/index.html" aria-current="page">Apps</a></li>
+          <li><a class="primary-nav__link" href="../categories/index.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../index.html#trending">Trending</a></li>
+          <li><a class="primary-nav__link" href="../about.html">About</a></li>
+          <li><a class="primary-nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+
+        <!-- Breadcrumbs: real links, so they work for visitors and crawlers. -->
+        <nav aria-label="Breadcrumb" style="margin-bottom: var(--sp-3);">
+          <ol style="display: flex; flex-wrap: wrap; gap: var(--sp-2); margin: 0; padding: 0; list-style: none; font-size: var(--fs-xs); color: var(--text-dim);">
+            <li><a href="../index.html">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page">All Apps</li>
+          </ol>
+        </nav>
+
+        <h1>All Apps</h1>
+        <p class="lead">The complete directory. Open any listing for full details.</p>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <form class="directory-toolbar" data-directory-controls hidden method="get" action="index.html">
+          <p class="visually-hidden" data-directory-status aria-live="polite"></p>
+
+          <label>
+            Search
+            <input class="directory-toolbar__search"
+                   type="search"
+                   name="q"
+                   data-directory-search
+                   placeholder="Search apps"
+                   autocomplete="off">
+          </label>
+
+          <label>
+            Category
+            <select data-directory-category>
+              <option value="">All categories</option>
+            </select>
+          </label>
+
+          <label>
+            Sort
+            <select data-directory-sort>
+              <option value="default">Default</option>
+              <option value="name-asc">Name A to Z</option>
+              <option value="name-desc">Name Z to A</option>
+            </select>
+          </label>
+        </form>
+
+        <!-- APP DIRECTORY START
+             Copy one <li> block below to add a listing.
+             Copy apps/example-app/ as the starting point for a new detail
+             page, then point this card's href at ../<slug>/index.html.
+             ADD NEW APP CARD HERE -->
+        <ul class="auto-grid app-grid" data-app-directory>
+
+          <li>
+            <article class="card card--interactive app-card" id="app-demo-notes">
+              <a class="app-card__hit" href="#app-demo-notes">
+                <div class="app-card__top">
+                  <img class="app-icon app-icon--sm" src="../assets/images/apps/demo-notes.svg" alt="" width="72" height="72">
+                  <div class="app-card__identity">
+                    <h3 class="card__title card__title--truncate" title="Northwind Notes">Northwind Notes</h3>
+                    <span class="badge badge--soft">Tools</span>
+                  </div>
+                </div>
+                <p class="app-card__desc">Placeholder listing. A compact notes app for short lists and reminders.</p>
+                <p class="rating">
+                  <span class="visually-hidden">Rating: not rated yet</span>
+                  <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                  <span>Not rated yet</span>
+                </p>
+                <dl class="app-card__facts">
+                  <dt class="visually-hidden">Version</dt>
+                  <dd>Version not listed</dd>
+                  <dt class="visually-hidden">Last updated</dt>
+                  <dd>Updated date not listed</dd>
+                </dl>
+                <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="card card--interactive app-card" id="app-demo-weather">
+              <a class="app-card__hit" href="#app-demo-weather">
+                <div class="app-card__top">
+                  <img class="app-icon app-icon--sm" src="../assets/images/apps/demo-weather.svg" alt="" width="72" height="72">
+                  <div class="app-card__identity">
+                    <h3 class="card__title card__title--truncate" title="Harbor Weather">Harbor Weather</h3>
+                    <span class="badge badge--soft">Weather</span>
+                  </div>
+                </div>
+                <p class="app-card__desc">Placeholder listing. Local conditions and a simple hourly outlook.</p>
+                <p class="rating">
+                  <span class="visually-hidden">Rating: not rated yet</span>
+                  <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                  <span>Not rated yet</span>
+                </p>
+                <dl class="app-card__facts">
+                  <dt class="visually-hidden">Version</dt>
+                  <dd>Version not listed</dd>
+                  <dt class="visually-hidden">Last updated</dt>
+                  <dd>Updated date not listed</dd>
+                </dl>
+                <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="card card--interactive app-card" id="app-demo-reader">
+              <a class="app-card__hit" href="#app-demo-reader">
+                <div class="app-card__top">
+                  <img class="app-icon app-icon--sm" src="../assets/images/apps/demo-reader.svg" alt="" width="72" height="72">
+                  <div class="app-card__identity">
+                    <h3 class="card__title card__title--truncate" title="Lumen Reader">Lumen Reader</h3>
+                    <span class="badge badge--soft">Books</span>
+                  </div>
+                </div>
+                <p class="app-card__desc">Placeholder listing. A distraction-light reader for saved articles.</p>
+                <p class="rating">
+                  <span class="visually-hidden">Rating: not rated yet</span>
+                  <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                  <span>Not rated yet</span>
+                </p>
+                <dl class="app-card__facts">
+                  <dt class="visually-hidden">Version</dt>
+                  <dd>Version not listed</dd>
+                  <dt class="visually-hidden">Last updated</dt>
+                  <dd>Updated date not listed</dd>
+                </dl>
+                <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="card card--interactive app-card" id="app-demo-timer">
+              <a class="app-card__hit" href="#app-demo-timer">
+                <div class="app-card__top">
+                  <img class="app-icon app-icon--sm" src="../assets/images/apps/demo-timer.svg" alt="" width="72" height="72">
+                  <div class="app-card__identity">
+                    <h3 class="card__title card__title--truncate" title="Pulse Timer">Pulse Timer</h3>
+                    <span class="badge badge--soft">Tools</span>
+                  </div>
+                </div>
+                <p class="app-card__desc">Placeholder listing. Countdown and interval timers for short work blocks.</p>
+                <p class="rating">
+                  <span class="visually-hidden">Rating: not rated yet</span>
+                  <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                  <span>Not rated yet</span>
+                </p>
+                <dl class="app-card__facts">
+                  <dt class="visually-hidden">Version</dt>
+                  <dd>Version not listed</dd>
+                  <dt class="visually-hidden">Last updated</dt>
+                  <dd>Updated date not listed</dd>
+                </dl>
+                <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="card card--interactive app-card" id="app-demo-maps">
+              <a class="app-card__hit" href="#app-demo-maps">
+                <div class="app-card__top">
+                  <img class="app-icon app-icon--sm" src="../assets/images/apps/demo-maps.svg" alt="" width="72" height="72">
+                  <div class="app-card__identity">
+                    <h3 class="card__title card__title--truncate" title="Atlas Maps Demo">Atlas Maps Demo</h3>
+                    <span class="badge badge--soft">Travel</span>
+                  </div>
+                </div>
+                <p class="app-card__desc">Placeholder listing. Offline-friendly map pins for trips you plan later.</p>
+                <p class="rating">
+                  <span class="visually-hidden">Rating: not rated yet</span>
+                  <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                  <span>Not rated yet</span>
+                </p>
+                <dl class="app-card__facts">
+                  <dt class="visually-hidden">Version</dt>
+                  <dd>Version not listed</dd>
+                  <dt class="visually-hidden">Last updated</dt>
+                  <dd>Updated date not listed</dd>
+                </dl>
+                <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="card card--interactive app-card" id="app-demo-gallery">
+              <a class="app-card__hit" href="#app-demo-gallery">
+                <div class="app-card__top">
+                  <img class="app-icon app-icon--sm" src="../assets/images/apps/demo-gallery.svg" alt="" width="72" height="72">
+                  <div class="app-card__identity">
+                    <h3 class="card__title card__title--truncate" title="Folio Gallery">Folio Gallery</h3>
+                    <span class="badge badge--soft">Photography</span>
+                  </div>
+                </div>
+                <p class="app-card__desc">Placeholder listing. A small gallery for albums you keep on the device.</p>
+                <p class="rating">
+                  <span class="visually-hidden">Rating: not rated yet</span>
+                  <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                  <span>Not rated yet</span>
+                </p>
+                <dl class="app-card__facts">
+                  <dt class="visually-hidden">Version</dt>
+                  <dd>Version not listed</dd>
+                  <dt class="visually-hidden">Last updated</dt>
+                  <dd>Updated date not listed</dd>
+                </dl>
+                <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="card card--interactive app-card" id="app-demo-tasks">
+              <a class="app-card__hit" href="#app-demo-tasks">
+                <div class="app-card__top">
+                  <img class="app-icon app-icon--sm" src="../assets/images/apps/demo-tasks.svg" alt="" width="72" height="72">
+                  <div class="app-card__identity">
+                    <h3 class="card__title card__title--truncate" title="Cedar Tasks">Cedar Tasks</h3>
+                    <span class="badge badge--soft">Productivity</span>
+                  </div>
+                </div>
+                <p class="app-card__desc">Placeholder listing. Checklists with due dates, without account sign-in.</p>
+                <p class="rating">
+                  <span class="visually-hidden">Rating: not rated yet</span>
+                  <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                  <span>Not rated yet</span>
+                </p>
+                <dl class="app-card__facts">
+                  <dt class="visually-hidden">Version</dt>
+                  <dd>Version not listed</dd>
+                  <dt class="visually-hidden">Last updated</dt>
+                  <dd>Updated date not listed</dd>
+                </dl>
+                <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="card card--interactive app-card" id="app-demo-radio">
+              <a class="app-card__hit" href="#app-demo-radio">
+                <div class="app-card__top">
+                  <img class="app-icon app-icon--sm" src="../assets/images/apps/demo-radio.svg" alt="" width="72" height="72">
+                  <div class="app-card__identity">
+                    <h3 class="card__title card__title--truncate" title="Drift Radio">Drift Radio</h3>
+                    <span class="badge badge--soft">Music</span>
+                  </div>
+                </div>
+                <p class="app-card__desc">Placeholder listing. A lightweight station list for background listening.</p>
+                <p class="rating">
+                  <span class="visually-hidden">Rating: not rated yet</span>
+                  <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                  <span>Not rated yet</span>
+                </p>
+                <dl class="app-card__facts">
+                  <dt class="visually-hidden">Version</dt>
+                  <dd>Version not listed</dd>
+                  <dt class="visually-hidden">Last updated</dt>
+                  <dd>Updated date not listed</dd>
+                </dl>
+                <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+              </a>
+            </article>
+          </li>
+
+        </ul>
+        <!-- APP DIRECTORY END -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="site-footer__grid">
+
+        <div>
+          <a class="site-logo" href="../index.html" aria-label="Yonoio home">
+            <span class="site-logo__mark" aria-hidden="true">Y</span>
+            <span class="site-logo__text">Yono<span class="site-logo__accent">io</span></span>
+          </a>
+          <p style="margin-top: var(--sp-3);">
+            An independent app discovery directory for Android. Not affiliated with
+            any app publisher.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="site-footer__heading">Browse</h2>
+          <ul class="site-footer__list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">All Apps</a></li>
+            <li><a href="../categories/index.html">Categories</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="site-footer__heading">Site</h2>
+          <ul class="site-footer__list">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="site-footer__heading">Legal</h2>
+          <ul class="site-footer__list">
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-current-year>2026</span> Yonoio. All rights reserved.</p>
+        <p>Made with HTML, CSS and vanilla JavaScript.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

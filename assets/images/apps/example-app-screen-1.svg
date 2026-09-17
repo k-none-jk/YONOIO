@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="640" viewBox="0 0 360 640">
+  <rect width="360" height="640" rx="32" fill="#10151c"/>
+  <rect x="14" y="14" width="332" height="612" rx="24" fill="#171e26"/>
+  <rect x="132" y="28" width="96" height="8" rx="4" fill="#202a35"/>
+  <circle cx="48" cy="72" r="18" fill="#1fd18b"/>
+  <rect x="78" y="60" width="160" height="12" rx="6" fill="#f1f5f8"/>
+  <rect x="78" y="80" width="96" height="8" rx="4" fill="#7c8895"/>
+  <rect x="36" y="120" width="288" height="120" rx="16" fill="#0e3229"/>
+  <rect x="36" y="256" width="288" height="72" rx="14" fill="#202a35"/>
+  <rect x="36" y="340" width="288" height="72" rx="14" fill="#202a35"/>
+  <text x="180" y="500" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#a7b3bf">Screenshot placeholder</text>
+  <text x="180" y="522" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="12" fill="#7c8895">1 of 3 - replace with a real screen</text>
+</svg>

@@ -1,0 +1,9 @@
+# robots.txt — Yonoio (yonoio.com)
+
+User-agent: *
+Allow: /
+
+# Design reference screenshots are not site content.
+Disallow: /references/
+
+Sitemap: https://yonoio.com/sitemap.xml
