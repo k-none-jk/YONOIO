@@ -199,7 +199,7 @@
   --font-mono:        ui-monospace, SFMono-Regular, "Cascadia Mono", Consolas, monospace;
 
   --fs-h1:            clamp(1.75rem, 4.2vw, 2.75rem);
-  --fs-hero:          clamp(2rem, 5.6vw, 3.75rem);   /* hero H1 only */
+  --fs-hero:          clamp(1.5rem, 4vw, 2.35rem);   /* hero H1 only */
   --fs-h2:            clamp(1.125rem, 2.2vw, 1.5rem);
   --fs-h3:            clamp(1rem, 1.6vw, 1.125rem);
   --fs-h4:            1rem;
@@ -929,40 +929,44 @@ hr {
 
 .category-card {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.category-card__hit {
+  display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: var(--sp-4);
-  width: 100%;
-  height: 100%;
+  flex: 1 1 auto;
   padding: var(--sp-4);
   color: inherit;
   text-decoration: none;
-  transition: background-color var(--dur) var(--ease),
-              border-color var(--dur) var(--ease);
 }
 
-.category-card:hover,
-.category-card:focus-visible {
-  background-color: var(--card-bg-hover);
-  border-color: var(--card-border-hover);
+.category-card__hit:hover,
+.category-card__hit:focus-visible {
   color: inherit;
   text-decoration: none;
 }
 
 .category-card__icon {
-  display: grid;
-  place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
   flex: 0 0 auto;
+  overflow: hidden;
   border-radius: var(--r-sm);
   background-color: var(--brand-soft);
-  color: var(--brand);
 }
 
-.category-card__icon svg {
-  width: 1.25rem;
-  height: 1.25rem;
+.category-card__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .category-card__body {
@@ -985,6 +989,13 @@ hr {
   color: var(--text-muted);
   font-size: var(--fs-sm);
   line-height: var(--lh-snug);
+}
+
+.category-card__download {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - (var(--sp-4) * 2));
+  margin: 0 var(--sp-4) var(--sp-4);
 }
 
 
@@ -1826,8 +1837,8 @@ body.is-nav-open {
 
    Mobile is NOT the desktop hero scaled down. Below 600px the hero switches
    to the portrait image crop, a heavier scrim, a tighter vertical rhythm and
-   an icon-only search button, and the proportions are driven by svh so the
-   hero fits a phone screen rather than a fraction of a desktop one.
+   an icon-only search button. Height follows the text and search, so the
+   next homepage section can sit above the fold on phones and desktops.
    ========================================================================== */
 
 .hero {
@@ -1840,12 +1851,7 @@ body.is-nav-open {
   border-bottom: 1px solid var(--line-accent);
   background-color: var(--bg-band);   /* shows while the artwork decodes */
   text-align: center;
-
-  /* Mobile: tall enough to feel cinematic, short enough that the section
-     below it peeks above the fold. svh so the collapsing browser toolbars
-     do not push the hero taller than the visible screen. */
-  min-height: 68vh;
-  min-height: 68svh;
+  min-height: 0;
 }
 
 /* --- Layer 1: artwork ---------------------------------------------------- */
@@ -1889,8 +1895,8 @@ body.is-nav-open {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--sp-5);
-  padding-block: clamp(var(--sp-10), 8vw, var(--sp-16));
+  gap: var(--sp-3);
+  padding-block: var(--sp-6);
 }
 
 /* Small capsule above the H1. Decorative framing for real text. */
@@ -1927,14 +1933,21 @@ body.is-nav-open {
 }
 
 .hero__text {
-  max-width: 52ch;
+  max-width: 48ch;
   margin-bottom: 0;
+  font-size: var(--fs-sm);
 }
 
 .hero__hint {
   margin-bottom: 0;
   color: var(--text-dim);
   font-size: var(--fs-sm);
+}
+
+@media (max-width: 599px) {
+  .hero__hint {
+    display: none;
+  }
 }
 
 .hero__hint a {
@@ -1956,9 +1969,9 @@ body.is-nav-open {
   align-items: center;
   gap: var(--sp-2);
   width: 100%;
-  max-width: 34rem;
-  margin-block-start: var(--sp-1);
-  padding: var(--sp-2);
+  max-width: 32rem;
+  margin-block-start: 0;
+  padding: var(--sp-1);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--r-pill);
   /* Light pill on a dark cinematic field — the search is the visual anchor. */
@@ -2026,11 +2039,6 @@ body.is-nav-open {
 
 @media (min-width: 600px) {
 
-  .hero {
-    min-height: 64vh;
-    min-height: 64svh;
-  }
-
   .hero__media img {
     object-position: 50% 38%;
   }
@@ -2040,12 +2048,13 @@ body.is-nav-open {
   }
 
   .hero__inner {
-    gap: var(--sp-6);
+    gap: var(--sp-4);
+    padding-block: var(--sp-8);
   }
 
   .hero-search__submit {
     width: auto;
-    padding-inline: var(--sp-6);
+    padding-inline: var(--sp-5);
   }
 
   .hero-search__label {
@@ -2053,16 +2062,13 @@ body.is-nav-open {
   }
 }
 
-/* --- 900px and up: spacious desktop composition -------------------------- */
+/* --- 900px and up: compact desktop composition -------------------------- */
 
 @media (min-width: 900px) {
 
-  .hero {
-    min-height: clamp(520px, 62vh, 640px);
-  }
-
   .hero__inner {
-    gap: var(--sp-8);
+    gap: var(--sp-4);
+    padding-block: var(--sp-8) var(--sp-10);
   }
 
   /* Two strong lines rather than one very long one. */
@@ -2071,7 +2077,7 @@ body.is-nav-open {
   }
 
   .hero-search {
-    max-width: 38rem;
+    max-width: 34rem;
   }
 }
 
@@ -2150,9 +2156,16 @@ body.is-nav-open {
 }
 
 /* Quiet reserved slot. Used only to hold the page location of a deferred
-   section (currently Phase 5). No cards, copy or chrome. */
+   section (currently Phase 5). No cards, copy or chrome. Collapsed while
+   empty so the compact hero can keep the next real section above the fold. */
+#trending:has(.phase-reserved) {
+  padding-block: 0;
+  border-block: 0;
+  background-color: transparent;
+}
+
 .phase-reserved {
-  min-height: clamp(3.5rem, 8vw, 5.5rem);
+  min-height: 0;
 }
 
 

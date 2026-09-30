@@ -139,14 +139,14 @@
         <p class="hero__eyebrow">Android app directory</p>
 
         <h1 class="hero__title" id="hero-title">Discover Android Apps Worth Installing</h1>
-
+        <!--
         <p class="lead hero__text">
           Browse apps by category, see what is currently trending, and open a
           full detail page before you decide to download.
         </p>
 
-        <!-- Search markup. Without JavaScript this submits to the directory.
-             With JavaScript, typing also filters the Latest Apps cards below. -->
+         Search markup. Submits to the directory. Homepage Latest Apps
+             filtering is off while Phase 6 stays hidden. -->
         <form class="hero-search" role="search" method="get" action="apps/index.html">
           <label class="visually-hidden" for="app-search">Search apps</label>
           <input class="hero-search__input"
@@ -192,12 +192,11 @@
     </section>
 
 
-    <!-- ==================================================================
-         Latest apps grid
-         Phase 6: the dense icon-tile grid. One <article> is included below
-         to fix the markup pattern each tile will follow.
-         =================================================================== -->
-    <section class="section" id="latest" aria-labelledby="latest-title">
+    <!-- PHASE 6 — Latest Apps. Hidden for now (do not wrap this block in
+         an HTML comment: it already contains comments, and nesting would
+         leak the cards back onto the page).
+         To restore: remove the hidden attribute on the section. -->
+    <section class="section" id="latest" hidden aria-labelledby="latest-title">
       <div class="container">
 
         <div class="section-head">
@@ -436,9 +435,11 @@
 
 
     <!-- ==================================================================
-         Category links
-         Phase 7: static category links. These are the main internal linking
-         route into /categories/, so they stay as plain crawlable links.
+         Category / product cards (#categories)
+
+         Icons live in assets/images/cards/. Replace those files (keep the
+         same names) or change the <img src>. Card body opens the app page;
+         Download is a separate affiliate link you fill in later.
          =================================================================== -->
     <section class="section section--band" id="categories" aria-labelledby="categories-title">
       <div class="container">
@@ -448,110 +449,159 @@
           <a class="section-head__link" href="categories/index.html">All categories</a>
         </div>
 
-        <!-- CATEGORY DIRECTORY START
-             Copy one <li> to add a category. href points at a placeholder
-             page under /categories/ until listings are filled in.
-             ADD NEW CATEGORY HERE -->
+        <!-- PRODUCT CARDS in #categories
+             Icons: put files in assets/images/cards/ then change the <img src>.
+             App page: edit category-card__hit href (apps/<slug>/index.html).
+             Affiliate: edit category-card__download href when you have the URL.
+             ADD NEW CARD HERE -->
         <ul class="auto-grid category-grid">
 
           <li>
-            <a class="card category-card" href="categories/productivity.html">
-              <span class="category-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-              </span>
-              <span class="category-card__body">
-                <h3 class="category-card__name">Productivity</h3>
-                <p class="category-card__desc">Tasks, notes and planning.</p>
-              </span>
-            </a>
+            <article class="card card--interactive category-card">
+              <a class="category-card__hit" href="apps/IE777-yono-game/index.html">
+                <span class="category-card__icon">
+                  <img src="assets/images/cards/IE777.jpeg" alt="" width="72" height="72">
+                </span>
+                <span class="category-card__body">
+                  <h3 class="category-card__name">IE777</h3>
+                  <p class="category-card__desc">Unlock your ₹200-500 reward bonus</p>
+                </span>
+              </a>
+              <a class="btn btn--primary btn--sm btn--block category-card__download"
+                 href="https://share.ie777game.org/share/agent/SA07E7T7?data=eyJtIjoxLCJsYW5nIjoiZW4iLCJpZCI6MX0="
+                 rel="nofollow sponsored noopener"
+                 aria-label="Download Productivity">Download</a>
+            </article>
           </li>
 
           <li>
-            <a class="card category-card" href="categories/education.html">
-              <span class="category-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-              </span>
-              <span class="category-card__body">
-                <h3 class="category-card__name">Education</h3>
-                <p class="category-card__desc">Learning, reference and study.</p>
-              </span>
-            </a>
+            <article class="card card--interactive category-card">
+              <a class="category-card__hit" href="apps/IX7-yono-game/index.html">
+                <span class="category-card__icon">
+                  <img src="assets/images/cards/IX7.jpeg" alt="" width="72" height="72">
+                </span>
+                <span class="category-card__body">
+                  <h3 class="category-card__name">IX7</h3>
+                  <p class="category-card__desc">100% Welcome Bonus up to 200-500.</p>
+                </span>
+              </a>
+              <a class="btn btn--primary btn--sm btn--block category-card__download"
+                 href="https://share.ix7game.org/share/agent/SF0LYXNN?data=eyJtIjoxLCJsYW5nIjoiZW4iLCJpZCI6MX0="
+                 rel="nofollow sponsored noopener"
+                 aria-label="Download Education">Download</a>
+            </article>
           </li>
 
           <li>
-            <a class="card category-card" href="categories/tools.html">
-              <span class="category-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-              </span>
-              <span class="category-card__body">
-                <h3 class="category-card__name">Tools</h3>
-                <p class="category-card__desc">Utilities that get a job done.</p>
-              </span>
-            </a>
+            <article class="card card--interactive category-card">
+              <a class="category-card__hit" href="apps/rajwin-yono-game/index.html">
+                <span class="category-card__icon">
+                  <img src="assets/images/cards/rajwin.jpeg" alt="" width="72" height="72">
+                </span>
+                <span class="category-card__body">
+                  <h3 class="category-card__name">RajWin</h3>
+                  <p class="category-card__desc">100% Welcome Bonus up to 200-500.</p>
+                </span>
+              </a>
+              <a class="btn btn--primary btn--sm btn--block category-card__download"
+                 href="https://share-rxapq9cajg.rajwin.co/share/agent/SF6Y8643?data=eyJtIjoxLCJsYW5nIjoiZW4iLCJpZCI6MX0="
+                 rel="nofollow sponsored noopener"
+                 aria-label="Download Tools">Download</a>
+            </article>
           </li>
 
           <li>
-            <a class="card category-card" href="categories/entertainment.html">
-              <span class="category-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-              </span>
-              <span class="category-card__body">
-                <h3 class="category-card__name">Entertainment</h3>
-                <p class="category-card__desc">Media, games and downtime.</p>
-              </span>
-            </a>
+            <article class="card card--interactive category-card">
+              <a class="category-card__hit" href="apps/X89-yono-game/index.html">
+                <span class="category-card__icon">
+                  <img src="assets/images/cards/X89.jpeg" alt="" width="72" height="72">
+                </span>
+                <span class="category-card__body">
+                  <h3 class="category-card__name">X89</h3>
+                  <p class="category-card__desc">100% Welcome Bonus up to 200-500.</p>
+                </span>
+              </a>
+              <a class="btn btn--primary btn--sm btn--block category-card__download"
+                 href="https://share.x89game.tv/share/agent/AA0K8V6Q?data=eyJtIjoyLCJsYW5nIjoiZW4iLCJpZCI6MX0="
+                 rel="nofollow sponsored noopener"
+                 aria-label="Download Entertainment">Download</a>
+            </article>
           </li>
 
           <li>
-            <a class="card category-card" href="categories/security.html">
-              <span class="category-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </span>
-              <span class="category-card__body">
-                <h3 class="category-card__name">Security</h3>
-                <p class="category-card__desc">Privacy, locks and protection.</p>
-              </span>
-            </a>
+            <article class="card card--interactive category-card">
+              <a class="category-card__hit" href="apps/AA-yono-game/index.html">
+                <span class="category-card__icon">
+                  <img src="assets/images/cards/AA.jpeg" alt="" width="72" height="72">
+                </span>
+                <span class="category-card__body">
+                  <h3 class="category-card__name">AA</h3>
+                  <p class="category-card__desc">Claim your free ₹20 and ₹500. Claim an additional ₹5,777 with your first deposit.</p>
+                </span>
+              </a>
+              <a class="btn btn--primary btn--sm btn--block category-card__download"
+                 href="https://aagame.company/?code=SQYTEKZ"
+                 rel="nofollow sponsored noopener"
+                 aria-label="Download Security">Download</a>
+            </article>
+          </li>
+<!--
+          <li>
+            <article class="card card--interactive category-card">
+              <a class="category-card__hit" href="apps/example-app/index.html">
+                <span class="category-card__icon">
+                  <img src="assets/images/cards/finance.svg" alt="" width="72" height="72">
+                </span>
+                <span class="category-card__body">
+                  <h3 class="category-card__name">Finance</h3>
+                  <p class="category-card__desc">Budgets, tracking and money tools.</p>
+                </span>
+              </a>
+              <a class="btn btn--primary btn--sm btn--block category-card__download"
+                 href="#"
+                 rel="nofollow sponsored noopener"
+                 aria-label="Download Finance">Download</a>
+            </article>
           </li>
 
           <li>
-            <a class="card category-card" href="categories/finance.html">
-              <span class="category-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
-              </span>
-              <span class="category-card__body">
-                <h3 class="category-card__name">Finance</h3>
-                <p class="category-card__desc">Budgets, tracking and money tools.</p>
-              </span>
-            </a>
+            <article class="card card--interactive category-card">
+              <a class="category-card__hit" href="apps/example-app/index.html">
+                <span class="category-card__icon">
+                  <img src="assets/images/cards/utilities.svg" alt="" width="72" height="72">
+                </span>
+                <span class="category-card__body">
+                  <h3 class="category-card__name">Utilities</h3>
+                  <p class="category-card__desc">Everyday helpers and system extras.</p>
+                </span>
+              </a>
+              <a class="btn btn--primary btn--sm btn--block category-card__download"
+                 href="#"
+                 rel="nofollow sponsored noopener"
+                 aria-label="Download Utilities">Download</a>
+            </article>
           </li>
 
           <li>
-            <a class="card category-card" href="categories/utilities.html">
-              <span class="category-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-              </span>
-              <span class="category-card__body">
-                <h3 class="category-card__name">Utilities</h3>
-                <p class="category-card__desc">Everyday helpers and system extras.</p>
-              </span>
-            </a>
-          </li>
-
-          <li>
-            <a class="card category-card" href="categories/communication.html">
-              <span class="category-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              </span>
-              <span class="category-card__body">
-                <h3 class="category-card__name">Communication</h3>
-                <p class="category-card__desc">Messaging, calls and sharing.</p>
-              </span>
-            </a>
+            <article class="card card--interactive category-card">
+              <a class="category-card__hit" href="apps/example-app/index.html">
+                <span class="category-card__icon">
+                  <img src="assets/images/cards/communication.svg" alt="" width="72" height="72">
+                </span>
+                <span class="category-card__body">
+                  <h3 class="category-card__name">Communication</h3>
+                  <p class="category-card__desc">Messaging, calls and sharing.</p>
+                </span>
+              </a>
+              <a class="btn btn--primary btn--sm btn--block category-card__download"
+                 href="#"
+                 rel="nofollow sponsored noopener"
+                 aria-label="Download Communication">Download</a>
+            </article>
           </li>
 
         </ul>
-        <!-- CATEGORY DIRECTORY END -->
+         CATEGORY DIRECTORY END -->
 
       </div>
     </section>

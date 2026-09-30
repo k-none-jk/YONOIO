@@ -11,6 +11,7 @@
      3. initFooterYear()    — copyright year
      4. initAppDirectory()  — search, category filter and sort on existing cards
      5. initFaq()           — accessible FAQ accordion
+     6. initCategoryDownloads() — skip empty # affiliate placeholders
    ========================================================================== */
 
 (function () {
@@ -488,6 +489,28 @@
 
 
   /* ------------------------------------------------------------------------
+     6. Category / product card download buttons
+
+     Each card has a separate Download link for an affiliate URL. Until that
+     href is a real address, keep the click from jumping to the top of the
+     page. Clicking the rest of the card still goes to the app page.
+     ------------------------------------------------------------------------ */
+
+  function initCategoryDownloads() {
+    var buttons = document.querySelectorAll('.category-card__download');
+
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function (event) {
+        var href = this.getAttribute('href');
+        if (!href || href === '#') {
+          event.preventDefault();
+        }
+      });
+    }
+  }
+
+
+  /* ------------------------------------------------------------------------
      Init
      ------------------------------------------------------------------------ */
 
@@ -497,6 +520,7 @@
     initFooterYear();
     initAppDirectory();
     initFaq();
+    initCategoryDownloads();
   }
 
   if (document.readyState === 'loading') {
