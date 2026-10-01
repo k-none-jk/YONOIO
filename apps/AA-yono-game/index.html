@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--
+    APP DETAIL TEMPLATE
+    Duplicate this folder as apps/<slug>/index.html and replace every
+    "Example App" value, path, screenshot and related-app card.
+    Do not invent ratings, reviews, download counts, awards or publishers.
+  -->
+  <title>Example App for Android — Yonoio</title>
+  <meta name="description" content="Example App is a template listing on Yonoio. Replace this description with a short, factual summary of the real Android app.">
+  <link rel="canonical" href="https://yonoio.com/apps/example-app/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0f14">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yonoio">
+  <meta property="og:title" content="Example App for Android — Yonoio">
+  <meta property="og:description" content="A template app detail page on Yonoio. Replace this with a short, factual summary of the real app.">
+  <meta property="og:url" content="https://yonoio.com/apps/example-app/">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Example App for Android — Yonoio">
+  <meta name="twitter:description" content="A template app detail page on Yonoio.">
+
+  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- Structured data states only what this page actually knows.
+       No aggregateRating, review, download count or offers. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Example App",
+    "description": "A template listing used to show how an app detail page is structured on Yonoio.",
+    "url": "https://yonoio.com/apps/example-app/",
+    "image": "https://yonoio.com/assets/images/apps/example-app.svg",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Android"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://yonoio.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Apps",
+        "item": "https://yonoio.com/apps/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Example App",
+        "item": "https://yonoio.com/apps/example-app/"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__text">
+        <span class="topbar__message">A growing directory of Android apps, with a detail page for every listing.</span>
+        <a class="topbar__link" href="../index.html">Browse all apps <span aria-hidden="true">&rarr;</span></a>
+      </p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+
+      <a class="site-logo" href="../../index.html" aria-label="Yonoio home">
+        <span class="site-logo__mark" aria-hidden="true">Y</span>
+        <span class="site-logo__text">Yono<span class="site-logo__accent">io</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link" href="../../index.html">Home</a></li>
+          <li><a class="primary-nav__link" href="../index.html" aria-current="page">Apps</a></li>
+          <li><a class="primary-nav__link" href="../../categories/index.html">Categories</a></li>
+          <li><a class="primary-nav__link" href="../../index.html#trending">Trending</a></li>
+          <li><a class="primary-nav__link" href="../../about.html">About</a></li>
+          <li><a class="primary-nav__link" href="../../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <article>
+
+      <header class="page-hero">
+        <div class="container">
+
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="../../index.html">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li><a href="../index.html">Apps</a></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page">Example App</li>
+            </ol>
+          </nav>
+
+          <div class="app-hero__layout">
+
+            <div class="app-hero__main">
+              <div class="app-hero__top">
+                <img class="app-icon app-icon--lg"
+                     src="../../assets/images/apps/example-app.svg"
+                     alt=""
+                     width="128"
+                     height="128">
+                <div class="app-hero__identity">
+                  <p class="app-hero__kicker">
+                    <a class="badge badge--soft" href="../../categories/tools.html">Tools</a>
+                    <span>Android</span>
+                  </p>
+                  <h1>Example App</h1>
+                </div>
+              </div>
+
+              <p class="lead app-hero__lead">
+                A template listing used to show how an app detail page is
+                structured on Yonoio. Replace this sentence with a short,
+                factual summary of what the real app does.
+              </p>
+
+              <p class="rating">
+                <span class="visually-hidden">Rating: not rated yet</span>
+                <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                <span>Not rated yet</span>
+              </p>
+
+              <dl class="app-meta">
+                <div>
+                  <dt>Category</dt>
+                  <dd><a href="../../categories/tools.html">Tools</a></dd>
+                </div>
+                <div>
+                  <dt>Platform</dt>
+                  <dd>Android</dd>
+                </div>
+                <div>
+                  <dt>Version</dt>
+                  <dd>Version not listed</dd>
+                </div>
+                <div>
+                  <dt>Publisher</dt>
+                  <dd>Publisher not listed</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="app-hero__actions">
+              <!-- Replace href with the real store or file URL when you have one. -->
+              <a class="btn btn--primary btn--lg" href="#get-app">Get Example App</a>
+              <a class="btn btn--ghost" href="../../categories/tools.html">Browse Tools</a>
+              <p class="app-hero__note">Download link not listed yet.</p>
+            </div>
+
+          </div>
+        </div>
+      </header>
+
+
+      <section class="section" aria-labelledby="screenshots-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-head__title" id="screenshots-title">Screenshots</h2>
+          </div>
+
+          <ul class="app-shots">
+            <li>
+              <figure class="app-shot">
+                <div class="media app-shot__frame">
+                  <img src="../../assets/images/apps/example-app-screen-1.svg"
+                       alt=""
+                       width="360"
+                       height="640">
+                </div>
+                <figcaption>Screenshot placeholder 1 of 3. Replace the file with a real screen.</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="app-shot">
+                <div class="media app-shot__frame">
+                  <img src="../../assets/images/apps/example-app-screen-2.svg"
+                       alt=""
+                       width="360"
+                       height="640">
+                </div>
+                <figcaption>Screenshot placeholder 2 of 3. Replace the file with a real screen.</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="app-shot">
+                <div class="media app-shot__frame">
+                  <img src="../../assets/images/apps/example-app-screen-3.svg"
+                       alt=""
+                       width="360"
+                       height="640">
+                </div>
+                <figcaption>Screenshot placeholder 3 of 3. Replace the file with a real screen.</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <div class="section section--band">
+        <div class="container app-detail">
+
+          <div class="app-detail__body">
+
+            <section aria-labelledby="about-title">
+              <h2 id="about-title">About Example App</h2>
+              <p class="text-muted">
+                This page is the starting point for every app listing on Yonoio.
+                Duplicate the folder, then rewrite this section with a clear
+                description of the real application: what it is for, what a
+                person can do with it, and how it differs from similar tools.
+              </p>
+              <p class="text-muted">
+                Keep the writing factual. If a detail is unknown, leave the
+                existing “not listed” wording rather than filling the gap with
+                guesses. Ratings, reviews, download counts and publisher names
+                belong here only when they are real.
+              </p>
+            </section>
+
+            <section aria-labelledby="features-title">
+              <h2 id="features-title">Features</h2>
+              <ul class="auto-grid feature-grid">
+                <li>
+                  <div class="card">
+                    <div class="card__body">
+                      <h3>Example feature one</h3>
+                      <p class="text-muted">Replace this with a real capability of the app.</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <div class="card__body">
+                      <h3>Example feature two</h3>
+                      <p class="text-muted">Replace this with a second, distinct capability.</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <div class="card__body">
+                      <h3>Example feature three</h3>
+                      <p class="text-muted">Replace this with a third capability worth calling out.</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <div class="card__body">
+                      <h3>Example feature four</h3>
+                      <p class="text-muted">Add or delete cards so the list matches the real product.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="how-title">
+              <h2 id="how-title">How It Works</h2>
+              <ol class="step-list">
+                <li>
+                  <span class="step-list__n" aria-hidden="true">1</span>
+                  <h3>Start</h3>
+                  <p class="text-muted">Replace this with the first step a person actually takes in the app.</p>
+                </li>
+                <li>
+                  <span class="step-list__n" aria-hidden="true">2</span>
+                  <h3>Work</h3>
+                  <p class="text-muted">Replace this with the main action the app is built around.</p>
+                </li>
+                <li>
+                  <span class="step-list__n" aria-hidden="true">3</span>
+                  <h3>Finish</h3>
+                  <p class="text-muted">Replace this with how the result is saved, shared or used.</p>
+                </li>
+              </ol>
+            </section>
+
+            <section aria-labelledby="audience-title">
+              <h2 id="audience-title">Who Is It For?</h2>
+              <ul class="auto-grid feature-grid">
+                <li>
+                  <div class="card">
+                    <div class="card__body">
+                      <h3>Example audience</h3>
+                      <p class="text-muted">Replace this with a real group of people the app is meant to help.</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="card">
+                    <div class="card__body">
+                      <h3>Example use case</h3>
+                      <p class="text-muted">Replace this with a situation where the app is actually useful.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="requirements-title">
+              <h2 id="requirements-title">Requirements</h2>
+              <dl class="req-list">
+                <div>
+                  <dt>Platform</dt>
+                  <dd>Android</dd>
+                </div>
+                <div>
+                  <dt>Android version</dt>
+                  <dd>Not listed</dd>
+                </div>
+                <div>
+                  <dt>Permissions</dt>
+                  <dd>Not listed</dd>
+                </div>
+                <div>
+                  <dt>Account</dt>
+                  <dd>Not listed</dd>
+                </div>
+                <div>
+                  <dt>Storage</dt>
+                  <dd>Not listed</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section aria-labelledby="faq-title">
+              <h2 id="faq-title">Frequently Asked Questions</h2>
+              <div class="app-faq">
+                <div class="app-faq__item">
+                  <h3 class="app-faq__heading">
+                    <button class="app-faq__trigger" type="button" id="faq-btn-real" aria-expanded="true" aria-controls="faq-real">
+                      Is Example App a real product?
+                    </button>
+                  </h3>
+                  <div class="app-faq__panel" id="faq-real" role="region" aria-labelledby="faq-btn-real">
+                    <p class="text-muted">
+                      No. This page is a template. When you duplicate it for a
+                      real listing, replace this answer with a factual one.
+                    </p>
+                  </div>
+                </div>
+                <div class="app-faq__item">
+                  <h3 class="app-faq__heading">
+                    <button class="app-faq__trigger" type="button" id="faq-btn-download" aria-expanded="true" aria-controls="faq-download">
+                      Where can I download it?
+                    </button>
+                  </h3>
+                  <div class="app-faq__panel" id="faq-download" role="region" aria-labelledby="faq-btn-download">
+                    <p class="text-muted">
+                      A store or file link has not been listed yet. The Get
+                      Example App button on this page jumps to that empty slot
+                      so the call to action still works without JavaScript.
+                    </p>
+                  </div>
+                </div>
+                <div class="app-faq__item">
+                  <h3 class="app-faq__heading">
+                    <button class="app-faq__trigger" type="button" id="faq-btn-rating" aria-expanded="true" aria-controls="faq-rating">
+                      What is the rating?
+                    </button>
+                  </h3>
+                  <div class="app-faq__panel" id="faq-rating" role="region" aria-labelledby="faq-btn-rating">
+                    <p class="text-muted">
+                      Not rated yet. Do not fill in stars, review quotes or
+                      download totals until real figures exist.
+                    </p>
+                  </div>
+                </div>
+                <div class="app-faq__item">
+                  <h3 class="app-faq__heading">
+                    <button class="app-faq__trigger" type="button" id="faq-btn-publisher" aria-expanded="true" aria-controls="faq-publisher">
+                      Who publishes this app?
+                    </button>
+                  </h3>
+                  <div class="app-faq__panel" id="faq-publisher" role="region" aria-labelledby="faq-btn-publisher">
+                    <p class="text-muted">
+                      Publisher not listed. Add the real developer or company
+                      name here only when it is known.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="get-app" aria-labelledby="get-title">
+              <h2 id="get-title">Get Example App</h2>
+              <div class="placeholder">
+                <span class="placeholder__label">Download link not listed</span>
+                <p>
+                  Replace this block with the official store page or file URL
+                  when you have one. Do not invent a listing or a file host.
+                </p>
+              </div>
+            </section>
+
+          </div>
+
+          <aside class="app-detail__aside" aria-label="App facts">
+            <div class="card app-detail__panel">
+              <p class="app-hero__kicker">
+                <a class="badge badge--soft" href="../../categories/tools.html">Tools</a>
+                <span>Android</span>
+              </p>
+              <dl class="app-meta">
+                <div>
+                  <dt>Version</dt>
+                  <dd>Version not listed</dd>
+                </div>
+                <div>
+                  <dt>Publisher</dt>
+                  <dd>Publisher not listed</dd>
+                </div>
+                <div>
+                  <dt>Rating</dt>
+                  <dd>Not rated yet</dd>
+                </div>
+              </dl>
+              <a class="btn btn--primary" href="#get-app">Get Example App</a>
+              <a class="btn btn--ghost" href="../index.html">All apps</a>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+
+      <section class="section" aria-labelledby="related-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-head__title" id="related-title">Related Apps</h2>
+            <a class="section-head__link" href="../index.html">View all apps</a>
+          </div>
+
+          <!-- Until these listings have their own detail pages, the cards
+               point at their directory entries. Swap the hrefs when you
+               duplicate this template for those apps. -->
+          <ul class="auto-grid app-grid">
+
+            <li>
+              <article class="card card--interactive app-card">
+                <a class="app-card__hit" href="../index.html#app-demo-notes">
+                  <div class="app-card__top">
+                    <img class="app-icon app-icon--sm" src="../../assets/images/apps/demo-notes.svg" alt="" width="72" height="72">
+                    <div class="app-card__identity">
+                      <h3 class="card__title card__title--truncate" title="Northwind Notes">Northwind Notes</h3>
+                      <span class="badge badge--soft">Tools</span>
+                    </div>
+                  </div>
+                  <p class="app-card__desc">Placeholder listing. A compact notes app for short lists and reminders.</p>
+                  <p class="rating">
+                    <span class="visually-hidden">Rating: not rated yet</span>
+                    <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                    <span>Not rated yet</span>
+                  </p>
+                  <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+                </a>
+              </article>
+            </li>
+
+            <li>
+              <article class="card card--interactive app-card">
+                <a class="app-card__hit" href="../index.html#app-demo-timer">
+                  <div class="app-card__top">
+                    <img class="app-icon app-icon--sm" src="../../assets/images/apps/demo-timer.svg" alt="" width="72" height="72">
+                    <div class="app-card__identity">
+                      <h3 class="card__title card__title--truncate" title="Pulse Timer">Pulse Timer</h3>
+                      <span class="badge badge--soft">Tools</span>
+                    </div>
+                  </div>
+                  <p class="app-card__desc">Placeholder listing. Countdown and interval timers for short work blocks.</p>
+                  <p class="rating">
+                    <span class="visually-hidden">Rating: not rated yet</span>
+                    <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                    <span>Not rated yet</span>
+                  </p>
+                  <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+                </a>
+              </article>
+            </li>
+
+            <li>
+              <article class="card card--interactive app-card">
+                <a class="app-card__hit" href="../index.html#app-demo-tasks">
+                  <div class="app-card__top">
+                    <img class="app-icon app-icon--sm" src="../../assets/images/apps/demo-tasks.svg" alt="" width="72" height="72">
+                    <div class="app-card__identity">
+                      <h3 class="card__title card__title--truncate" title="Cedar Tasks">Cedar Tasks</h3>
+                      <span class="badge badge--soft">Productivity</span>
+                    </div>
+                  </div>
+                  <p class="app-card__desc">Placeholder listing. Checklists with due dates, without account sign-in.</p>
+                  <p class="rating">
+                    <span class="visually-hidden">Rating: not rated yet</span>
+                    <span class="rating__stars" aria-hidden="true">☆☆☆☆☆</span>
+                    <span>Not rated yet</span>
+                  </p>
+                  <span class="btn btn--primary btn--sm btn--block app-card__cta">View App</span>
+                </a>
+              </article>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="site-footer__grid">
+
+        <div>
+          <a class="site-logo" href="../../index.html" aria-label="Yonoio home">
+            <span class="site-logo__mark" aria-hidden="true">Y</span>
+            <span class="site-logo__text">Yono<span class="site-logo__accent">io</span></span>
+          </a>
+          <p style="margin-top: var(--sp-3);">
+            An independent app discovery directory for Android. Not affiliated with
+            any app publisher.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="site-footer__heading">Browse</h2>
+          <ul class="site-footer__list">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../index.html">All Apps</a></li>
+            <li><a href="../../categories/index.html">Categories</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="site-footer__heading">Site</h2>
+          <ul class="site-footer__list">
+            <li><a href="../../about.html">About</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="site-footer__heading">Legal</h2>
+          <ul class="site-footer__list">
+            <li><a href="../../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../../terms.html">Terms of Use</a></li>
+            <li><a href="../../disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-current-year>2026</span> Yonoio. All rights reserved.</p>
+        <p>Made with HTML, CSS and vanilla JavaScript.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="../../js/main.js" defer></script>
+</body>
+</html>
