@@ -889,9 +889,9 @@ hr {
 }
 
 
-/* --- Rating (honest empty state) ----------------------------------------
-   Do not fill these stars unless a real rating exists. The default is the
-   "Not rated yet" state used by every placeholder listing. */
+/* --- Rating -------------------------------------------------------------
+   Unrated listings keep empty stars. Rated listings overlay a gold fill
+   whose width is (score / 5), so 4.0 is 80% and 4.5 is 90%. */
 
 .rating {
   display: inline-flex;
@@ -903,12 +903,29 @@ hr {
 }
 
 .rating__stars {
+  position: relative;
+  display: inline-block;
   letter-spacing: 0.06em;
   color: var(--text-dim);
 }
 
-.rating[data-rated="true"] .rating__stars {
+.rating__base,
+.rating__fill {
+  display: block;
+  letter-spacing: 0.06em;
+}
+
+.rating__fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
   color: var(--star);
+}
+
+.rating[data-rated="true"] .rating__base {
+  color: rgba(255, 194, 60, 0.22);
 }
 
 
@@ -1810,9 +1827,10 @@ body.is-nav-open {
   }
 
   .primary-nav__link {
-    padding: var(--sp-2) var(--sp-3);
+    padding: var(--sp-2) 0.55rem;
     border-bottom: 0;
     border-radius: var(--r-pill);
+    white-space: nowrap;
   }
 
   .primary-nav__link:hover {
